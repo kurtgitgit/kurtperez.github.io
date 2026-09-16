@@ -3,220 +3,372 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kurt Perez - CV</title>
+  <meta name="description" content="CV of Kurt Justine S. Perez, BSIT student specializing in Business Informatics.">
+  <title>Kurt Justine S. Perez | CV</title>
+
   <style>
+    :root {
+      --ink: #16191d;
+      --muted: #68707a;
+      --line: #dfe3e8;
+      --paper: #ffffff;
+      --wash: #f6f7f8;
+      --accent: #295c9b;
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
     }
 
     .cv {
-      max-width: 850px;
-      margin: 40px auto;
-      background: white;
-      padding: 45px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: min(100% - 32px, 960px);
+      margin: 32px auto;
+      padding: 50px;
+      background: var(--paper);
+      box-shadow: 0 12px 42px rgba(22, 25, 29, 0.08);
     }
 
-    header {
-      text-align: center;
-      border-bottom: 2px solid #333;
-      padding-bottom: 20px;
-      margin-bottom: 25px;
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
     }
 
     h1 {
-      font-size: 36px;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 45px;
+      letter-spacing: -2px;
+      line-height: 1.05;
     }
 
-    .title {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 12px;
+    .role {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .contact {
-      font-size: 14px;
-      color: #555;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 16px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Portrait photo */
+    .profile-photo {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid #dfe3e8;
+      border-radius: 0;
     }
 
     section {
-      margin-bottom: 25px;
+      padding-top: 34px;
     }
 
     h2 {
-      font-size: 20px;
-      border-bottom: 1px solid #bbb;
-      padding-bottom: 5px;
-      margin-bottom: 12px;
-      color: #222;
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    p, li {
-      font-size: 15px;
+    .summary {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: #3d444c;
     }
 
-    ul {
-      padding-left: 20px;
+    .entry {
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
     }
 
-    .education-item,
-    .experience-item {
-      margin-bottom: 15px;
+    .entry:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .entry:last-child {
+      padding-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    h3 {
+      margin-bottom: 3px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .meta,
+    .date {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .date {
-      color: #666;
-      font-size: 14px;
+      text-align: right;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .tech {
+      margin: 14px 0 0;
+      color: #3d444c;
+      font-size: 13px;
     }
 
     .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      list-style: none;
-      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 36px;
+      margin: 0;
     }
 
-    .skills li {
-      background: #eee;
-      padding: 6px 12px;
-      border-radius: 4px;
+    .skills div {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
     }
 
-    footer {
-      text-align: center;
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
-      margin-top: 30px;
+    .skills dt {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .skills dd {
+      margin: 0;
+      color: var(--muted);
       font-size: 13px;
-      color: #777;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .cv {
+        width: 100%;
         margin: 0;
-        padding: 25px;
+        padding: 28px 20px;
         box-shadow: none;
       }
 
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        order: -1;
+      }
+
+      .entry-header {
+        display: block;
+      }
+
+      .date {
+        margin-top: 4px;
+        text-align: left;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
       h1 {
-        font-size: 30px;
+        font-size: 36px;
       }
     }
 
     @media print {
       body {
         background: white;
+        font-size: 11px;
       }
 
       .cv {
+        width: 100%;
         margin: 0;
-        max-width: none;
+        padding: 32px;
         box-shadow: none;
+      }
+
+      section {
+        padding-top: 22px;
+      }
+
+      .entry {
+        padding: 14px 0;
       }
     }
   </style>
 </head>
+
 <body>
+  <main class="cv">
+    <header class="intro">
+      <div>
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>Kurt Justine S. Perez</h1>
+        <p class="role">BSIT Student | Major in Business Informatics</p>
 
-  <div class="cv">
-
-    <header>
-      <h1>KURT PEREZ</h1>
-      <div class="title">4th Year BSIT Student | Major in Business Informatics</div>
-      <div class="contact">
-        Email: your.email@example.com |
-        Phone: +63 XXX XXX XXXX |
-        Location: Philippines
+        <p class="contact">
+          <span>Poblacion, Urbiztondo, Pangasinan, Philippines</span>
+          <a href="mailto:kusa.perez.up@phinmaed.com">kusa.perez.up@phinmaed.com</a>
+          <a href="tel:+639812886530">+63 981 288 6530</a>
+          <a href="https://linkedin.com/in/kurt-justine-salomon-perez-bb4185424">LinkedIn</a>
+          <a href="https://github.com/kurtgitgit">GitHub</a>
+        </p>
       </div>
+
+      <img class="profile-photo" src="Kurt_Perez_Image.png" alt="Kurt Justine S. Perez">
     </header>
 
     <section>
       <h2>Profile</h2>
-      <p>
-        A motivated 4th Year Bachelor of Science in Information Technology
-        student majoring in Business Informatics. Interested in technology,
-        business processes, web development, and information systems.
-        Eager to apply academic knowledge, develop practical skills, and
-        contribute to a professional organization.
+      <p class="summary">
+        Motivated Information Technology student specializing in Business Informatics with hands-on expertise in full-stack mobile application development, AI integration, UI/UX design, cloud-backed architectures, and database management. Published researcher with a strong background in connecting software engineering with business process solutions.
       </p>
     </section>
 
     <section>
       <h2>Education</h2>
-      <div class="education-item">
-        <strong>Bachelor of Science in Information Technology</strong><br>
-        Major in Business Informatics<br>
-        <span class="date">4th Year Student</span>
-      </div>
+
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <h3>Phinma University of Pangasinan</h3>
+            <p class="meta">Bachelor of Science in Information Technology, Major in Business Informatics</p>
+          </div>
+          <p class="date">2023 - Present<br>Expected 2027</p>
+        </div>
+        <p class="tech"><strong>Relevant coursework:</strong> Systems Administration and Maintenance, Machine Learning, Full-Stack Development, Cloud Programming (AWS)</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <h3>Urbiztondo Catholic School</h3>
+            <p class="meta">Senior High School, STEM Strand</p>
+          </div>
+          <p class="date">2022 - May 2023</p>
+        </div>
+        <p class="tech"><strong>Honors:</strong> Graduated with Academic Honors; Dean's Lister</p>
+      </article>
     </section>
 
     <section>
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React Native</li>
-        <li>Basic Web Development</li>
-        <li>Database Fundamentals</li>
-        <li>Microsoft Office</li>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-        <li>Teamwork</li>
-      </ul>
+      <h2>Projects and Key Highlights</h2>
+
+      <article class="entry">
+        <h3>BrgyLink</h3>
+        <p class="meta">Barangay Management and Resident Service System | Capstone Project Lead Developer</p>
+        <ul>
+          <li>Architected and built a full-stack, cross-platform mobile application for local barangay administrative services and resident requests.</li>
+          <li>Integrated AI components and decentralized blockchain smart contracts on Sepolia to record immutable transaction hashes for security and transparency.</li>
+          <li>Implemented multi-factor authentication and role-based access control with a Node.js, Express, and MongoDB Atlas backend.</li>
+        </ul>
+        <p class="tech"><strong>Stack:</strong> React Native, Expo, Node.js, Express, MongoDB Atlas, Blockchain, Smart Contracts</p>
+      </article>
+
+      <article class="entry">
+        <h3>MuscleHub</h3>
+        <p class="meta">Smart Gym and Membership Management System | Frontend Developer</p>
+        <ul>
+          <li>Developed dynamic React.js web interfaces and collaborated with UI/UX team members on interactive landing pages, profiles, and management views.</li>
+          <li>Built BMI tracking graphs and dynamic user leaderboards to support member engagement and consistency.</li>
+          <li>Integrated PayMongo payment workflows for Philippine e-wallets and online banking.</li>
+        </ul>
+        <p class="tech"><strong>Stack:</strong> React.js, Node.js, MySQL, PayMongo API, Git, Figma</p>
+      </article>
+
+      <article class="entry">
+        <h3>Predictive Analysis and Image Classification System</h3>
+        <p class="meta">AI and Machine Learning Developer</p>
+        <ul>
+          <li>Trained and evaluated CNN deep-learning models with Python and TensorFlow for automated dataset classification.</li>
+          <li>Executed data pipelines covering preprocessing, feature extraction, evaluation metrics analysis, and model optimization.</li>
+          <li>Published academic research findings on predictive analysis models in the International Journal of Computer Applications.</li>
+        </ul>
+        <p class="tech"><strong>Stack:</strong> Python, TensorFlow, Convolutional Neural Networks, Anaconda, Kaggle</p>
+      </article>
     </section>
 
     <section>
-      <h2>Projects</h2>
-      <div class="experience-item">
-        <strong>Student Web Development Projects</strong>
-        <p>
-          Created simple web pages and user interfaces using HTML, CSS,
-          and JavaScript as part of academic and personal projects.
-        </p>
-      </div>
+      <h2>Technical Skills</h2>
 
-      <div class="experience-item">
-        <strong>Mobile Application Practice</strong>
-        <p>
-          Developed basic React Native interfaces and interactive components
-          as part of learning mobile application development.
-        </p>
-      </div>
+      <dl class="skills">
+        <div>
+          <dt>Languages and Frameworks</dt>
+          <dd>JavaScript, Python, React Native, React.js, Node.js, Express.js</dd>
+        </div>
+
+        <div>
+          <dt>Database and Cloud</dt>
+          <dd>AWS, MongoDB, MongoDB Atlas, MySQL, Render, Vercel</dd>
+        </div>
+
+        <div>
+          <dt>Tools and Libraries</dt>
+          <dd>Expo, TensorFlow, PayMongo API, Git, VirtualBox</dd>
+        </div>
+
+        <div>
+          <dt>Core Competencies</dt>
+          <dd>Design Thinking, Full-Stack Development, AI and Blockchain Integration, Systems Administration, UI/UX Design</dd>
+        </div>
+      </dl>
     </section>
-
-    <section>
-      <h2>Career Objective</h2>
-      <p>
-        To gain practical experience in the IT industry and build a career
-        involving business technology, information systems, and software
-        development while continuously improving my technical and
-        professional skills.
-      </p>
-    </section>
-
-    <section>
-      <h2>References</h2>
-      <p>Available upon request.</p>
-    </section>
-
-    <footer>
-      &copy; 2026 Kurt Perez
-    </footer>
-
-  </div>
-
+  </main>
 </body>
 </html>
