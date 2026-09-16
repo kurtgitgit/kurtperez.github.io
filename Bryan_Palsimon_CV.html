@@ -1,1 +1,659 @@
-<h1>CV</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bryan P. Palsimon - Resume</title>
+
+    <!-- ================= CSS ================= -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eeeeee;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #292929;
+        }
+
+        /* ================= MAIN RESUME ================= */
+
+        .resume {
+            width: 625px;
+            min-height: 884px;
+            margin: 20px auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================= LEFT SIDE ================= */
+
+        .left-side {
+            width: 40%;
+            min-height: 884px;
+            background: #b7a0a3;
+            color: white;
+        }
+
+
+        /* ================= PHOTO ================= */
+
+        .photo-area {
+            width: 100%;
+            height: 218px;
+
+            background: #559b99;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-picture {
+            width: 198px;
+            height: 198px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid #263b4a;
+        }
+
+
+        /* ================= LEFT CONTENT ================= */
+
+        .left-content {
+            padding: 40px 30px 20px 40px;
+        }
+
+        .left-section {
+            margin-bottom: 18px;
+        }
+
+        .left-section h3 {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .left-section p {
+            font-size: 11px;
+            line-height: 1.55;
+            margin-bottom: 3px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            margin-top: 15px;
+        }
+
+        .contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 9px;
+        }
+
+        .contact-icon {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            min-width: 15px;
+        }
+
+
+        /* ================= RIGHT SIDE ================= */
+
+        .right-side {
+            width: 60%;
+            background: white;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .header {
+            height: 250px;
+            background: #dfd0d3;
+
+            padding: 68px 25px 20px 24px;
+        }
+
+        .header h1 {
+            font-family: Arial, sans-serif;
+
+            font-size: 37px;
+
+            line-height: 1.08;
+
+            letter-spacing: 1px;
+
+            font-weight: bold;
+
+            color: #222222;
+        }
+
+        .position {
+            margin-top: 36px;
+
+            font-size: 18px;
+
+            font-style: italic;
+        }
+
+
+        /* ================= CONTENT ================= */
+
+        .content {
+            padding: 12px 16px 0 15px;
+        }
+
+        .content h2 {
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education-item {
+            margin-bottom: 8px;
+        }
+
+        .education-item h4 {
+            font-size: 12px;
+            line-height: 1.35;
+            font-weight: bold;
+        }
+
+        .education-item ul {
+            padding-left: 17px;
+            margin-top: 3px;
+        }
+
+        .education-item li {
+            font-size: 10px;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
+
+
+        /* ================= PROJECT TITLE ================= */
+
+        .project-title {
+            position: relative;
+            margin-top: 5px;
+        }
+
+        .project-title h2 {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        /* Arrow */
+
+        .project-title h2::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 0;
+            height: 0;
+
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+
+            border-left: 14px solid #dfd0d3;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .project {
+            margin-bottom: 8px;
+        }
+
+        .project h4 {
+            font-size: 12px;
+
+            line-height: 1.35;
+
+            font-weight: bold;
+        }
+
+        .project ul {
+            padding-left: 17px;
+
+            margin-top: 3px;
+        }
+
+        .project li {
+            font-size: 10px;
+
+            line-height: 1.4;
+
+            margin-bottom: 3px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .resume {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                width: 100%;
+            }
+
+            .photo-area {
+                height: 230px;
+            }
+
+            .header {
+                height: auto;
+                padding: 40px 30px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .left-content {
+                padding: 30px;
+            }
+
+        }
+
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                margin: 0;
+                box-shadow: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= RESUME ================= -->
+
+    <div class="resume">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <div class="left-side">
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-area">
+
+                
+
+                <img
+                    src="c:\Users\BRYAN\Downloads\52637c08-0109-43c2-b14a-669b6a742fc6.jpg."
+                    alt="Profile Picture"
+                    class="profile-picture"
+                >
+
+            </div>
+
+
+            <!-- LEFT INFORMATION -->
+
+            <div class="left-content">
+
+
+                <!-- PROFILE -->
+
+                <div class="left-section">
+
+                    <h3>PROFILE</h3>
+
+                    <p>
+                        Bachelor of Science in Information Technology,
+                        3rd year student at the PHINMA University of
+                        Pangasinan and have a big goals for learning
+                        about Technology, which always changing as the
+                        years goes by.
+                    </p>
+
+                </div>
+
+
+                <!-- LANGUAGE -->
+
+                <div class="left-section">
+
+                    <h3>LANGUAGE</h3>
+
+                    <p>English</p>
+                    <p>Tagalog</p>
+
+                </div>
+
+
+                <!-- COMPUTER SKILLS -->
+
+                <div class="left-section">
+
+                    <h3>COMPUTER SKILLS</h3>
+
+                    <p>Front end Developer</p>
+                    <p>Computer Assembly</p>
+                    <p>Website Designer</p>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="left-section contact">
+
+                    <h3>CONTACT ME</h3>
+
+                    <p>
+                        <span class="contact-icon">☎</span>
+                        09857817456
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">✉</span>
+                        plsmnbryan@gmail.com
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">📍</span>
+
+                        <span>
+                            117, Talogtog, Mangaldan,<br>
+                            Pangasinan
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= RIGHT ================= -->
+
+        <div class="right-side">
+
+
+            <!-- HEADER -->
+
+            <div class="header">
+
+                <h1>
+                    BRYAN P.<br>
+                    PALSIMON
+                </h1>
+
+                <p class="position">
+                    IT Student
+                </p>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="content">
+
+
+                <!-- ================= EDUCATION ================= -->
+
+                <h2>EDUCATION</h2>
+
+
+                <div class="education-item">
+
+                    <h4>
+                        PHINMA UNIVERSITY OF<br>
+                        PANGASINAN
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            <em>
+                                Bachelor of Science in Information<br>
+                                Technology
+                            </em>
+
+                            (2023 – Present)
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h4>
+                        MANGALDAN NATIONAL HIGH SCHOOL
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <em>General Academic Strand</em>
+                            (2020–2022)
+                        </li>
+
+                        <li>
+                            <em>High School</em>
+                            (2015–2019)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- ================= PROJECT ================= -->
+
+                <div class="project-title">
+
+                    <h2>PROJECT</h2>
+
+                </div>
+
+
+
+                <!-- CAR GAME -->
+
+                <div class="project">
+
+                    <h4>Car Game</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed a simple car game using Python,
+                            implementing basic game mechanics such as
+                            player controls, obstacle avoiding, collision
+                            detection, and score tracking using the Pygame
+                            library.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- COCOPATCH -->
+
+                <div class="project">
+
+                    <h4>Cocopatch</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed a mobile application designed to
+                            help users understand sign language, featuring
+                            interactive lessons, visual demonstrations,
+                            and user-friendly navigation to support
+                            effective learning.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- DIVA SALON -->
+
+                <div class="project">
+
+                    <h4>Diva Salon App</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Diva Salon App is a salon management system
+                            that enables clients to browse services,
+                            select stylists, and book appointments via
+                            mobile devices, while allowing administrators
+                            to manage bookings and monitor schedules
+                            through a web platform.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- MOCHA MOMENTS -->
+
+                <div class="project">
+
+                    <h4>Mocha Moments</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Mocha Moments is an online coffee ordering
+                            and analytics system that allows customers
+                            to order and track drinks, while admins
+                            manage menus and monitor sales.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- WORKPULSE -->
+
+                <div class="project">
+
+                    <h4>Workpulse</h4>
+
+                    <ul>
+
+                        <li>
+
+                            WorkPulse is an attendance and workforce
+                            analytics system that uses AI for facial
+                            recognition (registration and time tracking),
+                            predicts absences, ensures data accuracy,
+                            and integrates basic blockchain for payroll.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
