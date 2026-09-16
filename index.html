@@ -1,83 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSIT Student CVs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSIT Student CVs</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #172033;
+      background:
+        radial-gradient(circle at top left, #c7ddff 0, transparent 38%),
+        linear-gradient(135deg, #eef4ff, #f7f9fc);
+    }
 
-        h1 {
-            margin-bottom: 10px;
-        }
+    .container {
+      width: min(100%, 850px);
+      padding: 42px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(100, 135, 190, 0.2);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(25, 65, 120, 0.16);
+    }
 
-        p {
-            color: #666;
-        }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #3569b8;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-        .cv-link {
-            display: block;
-            margin: 15px 0;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
 
-        .cv-link:hover {
-            background-color: #555;
-        }
-    </style>
+    .subtitle {
+      margin: 12px 0 32px;
+      color: #5e6b7e;
+      font-size: 1.05rem;
+    }
+
+    .cv-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .cv-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      color: #172033;
+      background: #f6f9ff;
+      border: 1px solid #dbe6f7;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease,
+        border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cv-link::after {
+      content: "→";
+      color: #3569b8;
+      font-size: 1.3rem;
+    }
+
+    .cv-link:hover,
+    .cv-link:focus-visible {
+      color: white;
+      background: #3569b8;
+      border-color: #3569b8;
+      box-shadow: 0 10px 20px rgba(53, 105, 184, 0.25);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .cv-link:hover::after,
+    .cv-link:focus-visible::after {
+      color: white;
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        padding: 28px 20px;
+      }
+
+      .cv-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="container">
+    <p class="eyebrow">Student Portfolio</p>
+    <h1>BSIT Student CVs</h1>
+    <p class="subtitle">Major in Business Informatics</p>
 
-    <div class="container">
-
-        <h1>BSIT Student CVs</h1>
-        <p>Major in Business Informatics</p>
-
-        <a class="Kurt Perez" href="Kurt_Perez_CV.html">
-            Kurt Perez
-        </a>
-
-        <a class="Bryan Palsimon" href="Bryan_Palsimon_CV.html">
-            Bryan Palsimon
-        </a>
-
-        <a class="Hubert_Muyani_CV.html" href="hubert_muyano_cv.html">
-            Hubert Muyano
-        </a>
-
-        <a class="CharlesMatthew_David_CV.html" href="charles_david_cv.html">
-            Charles David
-        </a>
-
-        <a class="cv-link" href="john_paul_jade_soriano_cv.html">
-            John Paul Jade Soriano
-        </a>
-
-        <a class="MarkLuis_Delos Santos_CV.html" href="mark_luis_delos_santos_cv.html">
-            Mark Luis Delos Santos
-        </a>
-
-    </div>
-
+    <nav class="cv-list" aria-label="Student CV links">
+      <a class="cv-link" href="Kurt_Perez_CV.html">Kurt Perez</a>
+      <a class="cv-link" href="Bryan_Palsimon_CV.html">Bryan Palsimon</a>
+      <a class="cv-link" href="hubert_muyano_cv.html">Hubert Muyano</a>
+      <a class="cv-link" href="charles_david_cv.html">Charles David</a>
+      <a class="cv-link" href="john_paul_jade_soriano_cv.html">John Paul Jade Soriano</a>
+      <a class="cv-link" href="mark_luis_delos_santos_cv.html">Mark Luis Delos Santos</a>
+    </nav>
+  </main>
 </body>
 </html>
