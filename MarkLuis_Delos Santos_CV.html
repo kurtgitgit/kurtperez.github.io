@@ -1,1 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mark Luis S. Delos Santos - Resume</title>
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           RESUME CONTAINER
+        ========================== */
+
+        .resume {
+            width: 850px;
+            min-height: 1100px;
+            margin: 40px auto;
+            background: #ffffff;
+            display: flex;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .photo-area,
+        .education-item {
+            transition: transform 0.2s ease;
+        }
+
+        .photo-area:hover,
+        .education-item:hover {
+            transform: translateX(5px);
+        }
+        /* =========================
+           LEFT COLUMN
+        ========================== */
+
+        .left-side {
+            width: 32%;
+            background: #f8f8f8;
+            border-right: 1px solid #e5e5e5;
+        }
+
+        /* =========================
+           PHOTO
+        ========================== */
+
+        .photo-area {
+            height: 240px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f1f1;
+        }
+
+        .profile-picture {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* =========================
+           LEFT CONTENT
+        ========================== */
+
+        .left-content {
+            padding: 35px 30px;
+        }
+
+        .left-section {
+            margin-bottom: 32px;
+        }
+
+        .left-section h3 {
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+
+        .left-section h3::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #222;
+            margin-top: 7px;
+        }
+
+        .left-section p {
+            font-size: 10.5px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+
+        .left-section p b {
+            font-weight: normal;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin-bottom: 13px;
+        }
+
+        .contact-icon {
+            min-width: 15px;
+            font-size: 12px;
+            color: #222;
+        }
+
+        /* =========================
+           RIGHT COLUMN
+        ========================== */
+
+        .right-side {
+            width: 68%;
+            background: #ffffff;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .header {
+            padding: 65px 50px 50px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .header h1 {
+            font-size: 43px;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .position {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================== */
+
+        .content {
+            padding: 35px 50px 50px;
+        }
+
+        .content h2 {
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .content h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #222;
+            margin-top: 7px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .education-item h4 {
+            font-size: 12px;
+            line-height: 1.45;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .education-item ul {
+            padding-left: 17px;
+            margin-top: 6px;
+        }
+
+        .education-item li {
+            font-size: 10.5px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .project-title {
+            margin-top: 38px;
+        }
+
+        .project {
+            margin-bottom: 25px;
+        }
+
+        .project h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 6px;
+        }
+
+        .project ul {
+            padding-left: 17px;
+        }
+
+        .project li {
+            font-size: 10.5px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HOVER EFFECT
+        ========================== */
+
+        .project,
+        .education-item {
+            transition: transform 0.2s ease;
+        }
+
+        .project:hover,
+        .education-item:hover {
+            transform: translateX(3px);
+        }
+
+        
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .resume {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            body {
+                background: #ffffff;
+            }
+
+            .resume {
+                width: 100%;
+                margin: 0;
+                display: block;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .left-side,
+            .right-side {
+                width: 100%;
+            }
+
+            .left-side {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .photo-area {
+                height: 210px;
+            }
+
+            .header {
+                padding: 40px 30px;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            .left-content,
+            .content {
+                padding: 30px;
+            }
+
+        }
+
+        /* =========================
+           PRINT
+        ========================== */
+
+        @media print {
+
+            body {
+                background: #ffffff;
+            }
+
+            .resume {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            
+
+        }
+            
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         RESUME
+    ========================== -->
+
+    <div class="resume">
+
+        <!-- =========================
+             LEFT SIDE
+        ========================== -->
+
+        <div class="left-side">
+
+            <!-- PHOTO -->
+
+            <div class="photo-area">
+
+                <img
+                    src="MarkCv.jpg"
+                    alt="Profile Picture"
+                    class="profile-picture"
+                >
+
+            </div>
+
+
+            <!-- LEFT INFORMATION -->
+
+            <div class="left-content">
+
+                <!-- PROFILE -->
+
+                <div class="left-section">
+
+                    <h3>Profile</h3>
+
+                    <p>
+                        <b>
+                            A committed and driven University of Pangasinan
+                            Bachelor of Science in Information Technology student
+                            who is proficient in a variety of programming
+                            languages, including Python. Knowledgeable about
+                            many aspects of information technology, fusing
+                            superior academic performance with real-world
+                            experience. Capable of fixing problems and offering
+                            creative solutions while using technical know-how
+                            and a solid academic background to succeed in the
+                            ever-changing IT industry.
+                        </b>
+                    </p>
+
+                </div>
+
+
+                <!-- LANGUAGE -->
+
+                <div class="left-section">
+
+                    <h3>Language</h3>
+
+                    <p>English</p>
+                    <p>Tagalog</p>
+
+                </div>
+
+
+                <!-- COMPUTER SKILLS -->
+
+                <div class="left-section">
+
+                    <h3>Computer Skills</h3>
+
+                    <p>Front End Developer</p>
+                    <p>Computer Assembly</p>
+                    <p>Website Designer</p>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="left-section contact">
+
+                    <h3>Contact Me</h3>
+
+                    <p>
+                        <span class="contact-icon">☎</span>
+                        <span>+6391 6335 2926</span>
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">✉</span>
+                        <span>markluisdelossantos3@gmail.com</span>
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">📍</span>
+
+                        <span>
+                            Malempuec West,<br>
+                            Lingayen, Pangasinan
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RIGHT SIDE
+        ========================== -->
+
+        <div class="right-side">
+
+            <!-- HEADER -->
+
+            <div class="header">
+
+                <h1>
+                    Mark Luis S.
+                    Delos Santos
+                </h1>
+
+                <p class="position">
+                    IT Student
+                </p>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="content">
+
+                <!-- =========================
+                     EDUCATION
+                ========================== -->
+
+                <h2>Education</h2>
+
+
+                <div class="education-item">
+
+                    <h4>
+                        PHINMA UNIVERSITY OF PANGASINAN
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <em>
+                                Bachelor of Science in Information Technology
+                            </em>
+                            — 2023–Present
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h4>
+                        ST. COLUMBAN INSTITUTE
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <em>General Academic Strand</em>
+                            — 2020–2022
+                        </li>
+
+                        <li>
+                            <em>High School</em>
+                            — 2015–2019
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =========================
+                     PROJECTS
+                ========================== -->
+
+                <div class="project-title">
+
+                    <h2>Projects</h2>
+
+                </div>
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project">
+
+                    <h4>Library Management System</h4>
+
+                    <ul>
+
+                        <li>
+                            Library Management System (LMS) is designed to make
+                            library services faster and more convenient.
+                            Registered members can easily log in using a unique
+                            QR code, with a beep sound confirming successful
+                            scans. The system also includes book borrowing,
+                            inventory management, a book locator, and a search
+                            bar for quick and easy access to library resources.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project">
+
+                    <h4>BrewHive (2024)</h4>
+
+                    <ul>
+
+                        <li>
+                            BrewHive aims to provide a seamless and enjoyable
+                            experience for café lovers, allowing them to
+                            discover, order, and enjoy their favorite beverages
+                            and food items from local cafes.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project">
+
+                    <h4>Montra Studio Pose & Print (2025)</h4>
+
+                    <ul>
+
+                        <li>
+                            A studio dedicated to the art of preserving life's
+                            fleeting beauty. Every photograph is more than an
+                            image; it's a memory, a story, a piece of time held
+                            still. Through light, detail, and vision, we
+                            transform ordinary moments into timeless works of
+                            art, so your memories live on forever.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project">
+
+                    <h4>EDUBRIDGE (2026)</h4>
+
+                    <ul>
+
+                        <li>
+                            Community Pulse is a community-based system that
+                            enables residents to report and track barangay
+                            concerns through a centralized platform. It improves
+                            communication between residents and local
+                            authorities by ensuring that complaints are
+                            monitored, properly documented, and addressed,
+                            promoting transparency, accountability, and
+                            community problem resolution.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
