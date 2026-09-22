@@ -1,218 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charles Matthew C. David - CV</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Charles Matthew C. David - Resume</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9eef2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #263238;
+}
+
+.resume {
+    width: 850px;
+    min-height: 1100px;
+    margin: 35px auto;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    background: #172b3a;
+    color: white;
+    padding: 35px 28px;
+}
+
+.photo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #6cc5c2;
+    padding: 4px;
+    background: white;
+}
+
+.sidebar-name {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar-name h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.sidebar-name p {
+    color: #6cc5c2;
+    font-size: 12px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #6cc5c2;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.sidebar-section p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.contact-icon {
+    color: #6cc5c2;
+    font-size: 15px;
+    min-width: 18px;
+}
+
+
+/* ================= MAIN ================= */
+
+.main {
+    padding: 0;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background: #f5f8fa;
+    padding: 55px 45px 40px;
+    border-bottom: 5px solid #6cc5c2;
+}
+
+.header h1 {
+    font-size: 43px;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #172b3a;
+}
+
+.header h1 span {
+    font-weight: 300;
+}
+
+.header .position {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #6a7b86;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    padding: 35px 45px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-title .number {
+    width: 30px;
+    height: 30px;
+    background: #6cc5c2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #172b3a;
+}
+
+
+/* ================= PROFILE ================= */
+
+.summary {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #596970;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education {
+    border-left: 2px solid #dce5e9;
+    padding-left: 20px;
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.education-item::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #6cc5c2;
+    border-radius: 50%;
+    position: absolute;
+    left: -26px;
+    top: 5px;
+}
+
+.education-item h3 {
+    font-size: 13px;
+    color: #172b3a;
+    margin-bottom: 6px;
+}
+
+.education-item ul {
+    padding-left: 18px;
+}
+
+.education-item li {
+    font-size: 10.5px;
+    line-height: 1.5;
+    margin-bottom: 2px;
+    color: #596970;
+}
+
+
+/* ================= PERSONAL INFORMATION ================= */
+
+.personal ul {
+    padding-left: 18px;
+}
+
+.personal li {
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: #596970;
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #172b3a;
+    margin-bottom: 6px;
+}
+
+.experience ul {
+    padding-left: 20px;
+}
+
+.experience li {
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: #596970;
+}
+
+
+/* ================= REFERENCES ================= */
+
+.references ul {
+    padding-left: 18px;
+}
+
+.references li {
+    font-size: 10.5px;
+    color: #596970;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .resume {
+        width: 95%;
+        grid-template-columns: 1fr;
     }
+
+}
+
+@media (max-width: 500px) {
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .cv {
-      max-width: 850px;
-      margin: 40px auto;
-      background: white;
-      padding: 45px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    header {
-      text-align: center;
-      border-bottom: 2px solid #333;
-      padding-bottom: 20px;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 36px;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
-    }
-
-    .title {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    .contact {
-      font-size: 14px;
-      color: #555;
-    }
-
-    section {
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      font-size: 20px;
-      border-bottom: 1px solid #bbb;
-      padding-bottom: 5px;
-      margin-bottom: 12px;
-      color: #222;
-    }
-
-    p, li {
-      font-size: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .education-item,
-    .experience-item {
-      margin-bottom: 15px;
-    }
-
-    .date {
-      color: #666;
-      font-size: 14px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .skills li {
-      background: #eee;
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
-
-    footer {
-      text-align: center;
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
-      margin-top: 30px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      .cv {
-        margin: 0;
-        padding: 25px;
-        box-shadow: none;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-    }
-
-    @media print {
-      body {
         background: white;
-      }
-
-      .cv {
-        margin: 0;
-        max-width: none;
-        box-shadow: none;
-      }
     }
-  </style>
+
+    .resume {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .header {
+        padding: 40px 25px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .content {
+        padding: 30px 25px;
+    }
+
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .resume {
+        width: 850px;
+        margin: 0;
+        box-shadow: none;
+    }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-  <div class="cv">
+<div class="resume">
 
-    <header>
-      <h1>CHARLES MATTHEW C. DAVID</h1>
-      <div class="title">4th Year BSIT Student | Major in Business Informatics</div>
-      <div class="contact">
-        Email: charlesmatthewcdavid@gmail.com |
-        Phone: +63 9773980893 |
-        Location: Philippines
-      </div>
+
+<!-- ================= LEFT SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+
+    <!-- PHOTO -->
+
+    <div class="photo-container">
+
+        <img
+            src="profile.jpg"
+            alt="Charles Matthew C. David"
+            class="profile-picture"
+        >
+
+    </div>
+
+
+    <!-- NAME -->
+
+    <div class="sidebar-name">
+
+        <h2>
+            DAVID,<br>
+            CHARLES<br>
+            MATTHEW C.
+        </h2>
+
+        <p>
+            ASPIRING IT STUDENT
+        </p>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div class="sidebar-section">
+
+        <h3>CONTACT</h3>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">☎</span>
+
+            <span>
+                +639773980893
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">⌂</span>
+
+            <span>
+                Wawa Lingayen, Pangasinan
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">in</span>
+
+            <span>
+                https://www.linkedin.com/in/
+                charles-matthew-david-2150272a0
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">✉</span>
+
+            <span>
+                charlesmatthewcdavid@gmail.com
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- TECHNICAL SKILLS -->
+
+    <div class="sidebar-section">
+
+        <h3>TECHNICAL SKILLS</h3>
+
+        <p>• Data Analysis & Interpretation</p>
+        <p>• Microsoft Office</p>
+        <p>• Business Process Analysis</p>
+        <p>• UI/UX Basic Design</p>
+        <p>• Communication and Teamwork</p>
+
+    </div>
+
+
+    <!-- CORE WORK SKILLS -->
+
+    <div class="sidebar-section">
+
+        <h3>CORE WORK SKILLS</h3>
+
+        <p>• Patience</p>
+        <p>• Teamwork</p>
+        <p>• Creativity</p>
+        <p>• Problem Solving</p>
+        <p>• Time Management</p>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <h1>
+            CHARLES <span>MATTHEW</span><br>
+            C. DAVID
+        </h1>
+
+        <p class="position">
+            ASPIRING IT STUDENT
+        </p>
+
     </header>
 
-    <section>
-      <h2>Profile</h2>
-      <p>
-        A motivated 4th Year Bachelor of Science in Information Technology
-        student majoring in Business Informatics. Interested in technology,
-        business processes, web development, and information systems.
-        Eager to apply academic knowledge, develop practical skills, and
-        contribute to a professional organization.
-      </p>
-    </section>
 
-    <section>
-      <h2>Education</h2>
-      <div class="education-item">
-        <strong>Bachelor of Science in Information Technology</strong><br>
-        Major in Business Informatics<br>
-        <span class="date">4th Year Student</span>
-      </div>
-    </section>
+    <div class="content">
 
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Microsoft Office</li>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="experience-item">
-        <strong>Student Web Development Projects</strong>
-        <p>
-          Created simple web pages and user interfaces using HTML, CSS,
-          and JavaScript as part of academic and personal projects.
-        </p>
-      </div>
+        <!-- PROFILE SUMMARY -->
 
-      <div class="experience-item">
-        <strong>Mobile Application Practice</strong>
-        <p>
-          Developed basic React Native interfaces and interactive components
-          as part of learning mobile application development.
-        </p>
-      </div>
-    </section>
+        <section class="section">
 
-    <section>
-      <h2>Career Objective</h2>
-      <p>
-        To gain practical experience in the IT industry and build a career
-        involving business technology, information systems, and software
-        development while continuously improving my technical and
-        professional skills.
-      </p>
-    </section>
+            <div class="section-title">
 
-    <section>
-      <h2>References</h2>
-      <p>Available upon request.</p>
-    </section>
+                <div class="number">
+                    01
+                </div>
 
-    <footer>
-      &copy; 2026 Charles Matthew C. David
-    </footer>
+                <h2>
+                    PROFILE SUMMARY
+                </h2>
 
-  </div>
+            </div>
+
+            <p class="summary">
+
+                Motivated and detail-oriented Information Technology
+                student majoring in Business Informatics, seeking an
+                opportunity to apply technical and analytical skills in
+                a real-world environment. Eager to contribute to
+                data-driven decision-making and business solutions.
+
+            </p>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h2>
+                    EDUCATION
+                </h2>
+
+            </div>
+
+
+            <div class="education">
+
+
+                <div class="education-item">
+
+                    <h3>
+                        PHINMA University of Pangasinan
+                        (2023 – Present)
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            28WV+R2R, Arellano St, Downtown District,
+                            Dagupan, 2400 Pangasinan
+                        </li>
+
+                        <li>
+                            Bachelor of Science in Information Technology
+                        </li>
+
+                        <li>
+                            College
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>
+                        Lasip National High School
+                        (2018–2023)
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Lasip, Lingayen Pangasinan
+                        </li>
+
+                        <li>
+                            Junior-Senior High school
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>
+                        Wawa Elementary School
+                        (2017–2018)
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Wawa Lingayen Pangasinan
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="section personal">
+
+            <div class="section-title">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h2>
+                    PERSONAL INFORMATION
+                </h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    Date of Birth: December 24, 2005
+                </li>
+
+                <li>
+                    Nationality: Filipino
+                </li>
+
+                <li>
+                    Languages: English, Filipino
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section class="section experience">
+
+            <div class="section-title">
+
+                <div class="number">
+                    04
+                </div>
+
+                <h2>
+                    EXPERIENCE
+                </h2>
+
+            </div>
+
+
+            <p class="experience-title">
+                Academic Projects & Group Work
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Worked collaboratively in team-based
+                    system development projects
+                </li>
+
+                <li>
+                    Presented technical reports and system proposals
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- REFERENCES -->
+
+        <section class="section references">
+
+            <div class="section-title">
+
+                <div class="number">
+                    05
+                </div>
+
+                <h2>
+                    REFERENCES
+                </h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    Available upon request
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+</div>
 
 </body>
+
 </html>
