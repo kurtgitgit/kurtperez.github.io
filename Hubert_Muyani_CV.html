@@ -1,452 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CV of Hubert Muyano, BSIT student specializing in Business Informatics.">
-  <title>Hubert Muyano | CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --ink: #16191d;
-      --muted: #68707a;
-      --line: #dfe3e8;
-      --paper: #ffffff;
-      --wash: #f6f7f8;
-      --accent: #295c9b;
-    }
+    <title>Hubert Muyano - Resume</title>
 
-    * {
-      box-sizing: border-box;
-    }
+    <style>
 
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--wash);
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.65;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .cv {
-      width: min(100% - 32px, 960px);
-      margin: 32px auto;
-      padding: 50px;
-      background: var(--paper);
-      box-shadow: 0 12px 42px rgba(22, 25, 29, 0.08);
-    }
+        body {
+            background: #eeeeee;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #292929;
+        }
 
-    .intro {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: center;
-      padding-bottom: 34px;
-      border-bottom: 1px solid var(--line);
-    }
+        .resume {
+            width: 625px;
+            min-height: 884px;
+            margin: 20px auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
 
-    .eyebrow {
-      margin: 0 0 8px;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+        /* LEFT SIDE */
 
-    h1, h2, h3, p {
-      margin-top: 0;
-    }
+        .left-side {
+            width: 40%;
+            min-height: 884px;
+            background: #b7a0a3;
+            color: white;
+        }
 
-    h1 {
-      margin-bottom: 10px;
-      font-size: 45px;
-      letter-spacing: -2px;
-      line-height: 1.05;
-    }
+        /* PHOTO */
 
-    .role {
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 16px;
-    }
+        .photo-area {
+            width: 100%;
+            height: 218px;
+            background: #559b99;
 
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px 16px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .contact a {
-      color: inherit;
-      text-decoration: none;
-    }
+        .profile-picture {
+            width: 198px;
+            height: 198px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 5px solid #263b4a;
+        }
 
-    .contact a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-    }
+        /* LEFT CONTENT */
 
-    section {
-      padding-top: 34px;
-    }
+        .left-content {
+            padding: 40px 30px 20px 40px;
+        }
 
-    h2 {
-      margin-bottom: 14px;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+        .left-section {
+            margin-bottom: 18px;
+        }
 
-    .summary {
-      max-width: 760px;
-      margin-bottom: 0;
-      color: #3d444c;
-    }
+        .left-section h3 {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-    .entry {
-      padding: 22px 0;
-      border-top: 1px solid var(--line);
-    }
+        .left-section p {
+            font-size: 11px;
+            line-height: 1.55;
+            margin-bottom: 3px;
+        }
 
-    .entry:first-of-type {
-      padding-top: 0;
-      border-top: 0;
-    }
+        /* CONTACT */
 
-    .entry:last-child {
-      padding-bottom: 0;
-    }
+        .contact {
+            margin-top: 15px;
+        }
 
-    .entry-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: baseline;
-    }
+        .contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 9px;
+        }
 
-    h3 {
-      margin-bottom: 3px;
-      font-size: 16px;
-      line-height: 1.35;
-    }
+        .contact-icon {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            min-width: 15px;
+        }
 
-    .meta,
-    .date {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+        /* RIGHT SIDE */
 
-    .date {
-      text-align: right;
-    }
+        .right-side {
+            width: 60%;
+            background: white;
+        }
 
-    ul {
-      margin: 12px 0 0;
-      padding-left: 18px;
-    }
+        /* HEADER */
 
-    li + li {
-      margin-top: 6px;
-    }
+        .header {
+            height: 250px;
+            background: #dfd0d3;
+            padding: 68px 25px 20px 24px;
+        }
 
-    .tech {
-      margin: 14px 0 0;
-      color: #3d444c;
-      font-size: 13px;
-    }
+        .header h1 {
+            font-family: Arial, sans-serif;
+            font-size: 37px;
+            line-height: 1.08;
+            letter-spacing: 1px;
+            font-weight: bold;
+            color: #222222;
+        }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px 36px;
-      margin: 0;
-    }
+        .position {
+            margin-top: 36px;
+            font-size: 18px;
+            font-style: italic;
+        }
 
-    .skills div {
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-    }
+        /* CONTENT */
 
-    .skills dt {
-      margin-bottom: 5px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+        .content {
+            padding: 12px 16px 0 15px;
+        }
 
-    .skills dd {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+        .content h2 {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-    @media (max-width: 640px) {
-      .cv {
-        width: 100%;
-        margin: 0;
-        padding: 28px 20px;
-        box-shadow: none;
-      }
+        /* EDUCATION */
 
-      .intro {
-        grid-template-columns: 1fr;
-      }
+        .education-item {
+            margin-bottom: 8px;
+        }
 
-      .entry-header {
-        display: block;
-      }
+        .education-item h4 {
+            font-size: 12px;
+            line-height: 1.35;
+            font-weight: bold;
+        }
 
-      .date {
-        margin-top: 4px;
-        text-align: left;
-      }
+        .education-item ul {
+            padding-left: 17px;
+            margin-top: 3px;
+        }
 
-      .skills {
-        grid-template-columns: 1fr;
-      }
+        .education-item li {
+            font-size: 10px;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
 
-      h1 {
-        font-size: 36px;
-      }
-    }
+        /* PROJECT TITLE */
 
-    @media print {
-      body {
-        background: white;
-        font-size: 11px;
-      }
+        .project-title {
+            position: relative;
+            margin-top: 5px;
+        }
 
-      .cv {
-        width: 100%;
-        margin: 0;
-        padding: 32px;
-        box-shadow: none;
-      }
+        .project-title h2 {
+            position: relative;
+            padding-left: 20px;
+        }
 
-      section {
-        padding-top: 22px;
-      }
+        .project-title h2::before {
+            content: "";
 
-      .entry {
-        padding: 14px 0;
-      }
-    }
-  </style>
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 0;
+            height: 0;
+
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+
+            border-left: 14px solid #dfd0d3;
+        }
+
+        /* PROJECTS */
+
+        .project {
+            margin-bottom: 8px;
+        }
+
+        .project h4 {
+            font-size: 12px;
+            line-height: 1.35;
+            font-weight: bold;
+        }
+
+        .project ul {
+            padding-left: 17px;
+            margin-top: 3px;
+        }
+
+        .project li {
+            font-size: 10px;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .resume {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                width: 100%;
+            }
+
+            .photo-area {
+                height: 230px;
+            }
+
+            .header {
+                height: auto;
+                padding: 40px 30px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .left-content {
+                padding: 30px;
+            }
+
+        }
+
+        /* PRINT */
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                margin: 0;
+                box-shadow: none;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
-  <main class="cv">
 
-    <header class="intro">
-      <div>
-        <p class="eyebrow">Curriculum Vitae</p>
+    <div class="resume">
 
-        <h1>HUBERT MUYANO</h1>
+        <!-- LEFT SIDE -->
 
-        <p class="role">
-          BSIT Student | Major in Business Informatics
-        </p>
+        <div class="left-side">
 
-        <p class="contact">
-          <span>Mangaldan, Pangasinan, Philippines</span>
+            <!-- PHOTO -->
 
-          <a href="mailto:moyanohubert@gmail.com">
-            moyanohubert@gmail.com
-          </a>
+            <div class="photo-area">
 
-          <a href="tel:+639203576013">
-            +63 920 357 6013
-          </a>
+                <img
+                    src="hubert_profile.jpg"
+                    alt="Hubert Muyano Profile Picture"
+                    class="profile-picture"
+                >
 
-          <a href="https://github.com/godzu033">
-            GitHub
-          </a>
-        </p>
-      </div>
-    </header>
+            </div>
 
 
-    <section>
-      <h2>Profile</h2>
+            <!-- LEFT INFORMATION -->
 
-      <p class="summary">
-        IT student with a strong academic foundation and hands-on experience
-        in various aspects of information technology. Eager to apply knowledge
-        gained through coursework to real-world IT challenges. Skilled in
-        problem solving, UI/UX design, and teamwork.
-      </p>
-    </section>
+            <div class="left-content">
+
+                <!-- PROFILE -->
+
+                <div class="left-section">
+
+                    <h3>PROFILE</h3>
+
+                    <p>
+                        Information Technology student specializing in
+                        Business Informatics at PHINMA University of
+                        Pangasinan. Has a strong foundation in IT concepts
+                        and hands-on experience in academic and
+                        project-based development.
+                    </p>
+
+                </div>
 
 
-    <section>
-      <h2>Education</h2>
+                <!-- LANGUAGE -->
 
-      <article class="entry">
+                <div class="left-section">
 
-        <div class="entry-header">
+                    <h3>LANGUAGE</h3>
 
-          <div>
-            <h3>PHINMA University of Pangasinan</h3>
+                    <p>English</p>
+                    <p>Filipino</p>
 
-            <p class="meta">
-              Bachelor of Science in Information Technology,
-              Major in Business Informatics
-            </p>
-          </div>
+                </div>
 
-          <p class="date">
-            2023 - Present<br>
-            Expected 2027
-          </p>
+
+                <!-- COMPUTER SKILLS -->
+
+                <div class="left-section">
+
+                    <h3>COMPUTER SKILLS</h3>
+
+                    <p>JavaScript</p>
+                    <p>Python</p>
+                    <p>React Native</p>
+                    <p>React.js</p>
+                    <p>Node.js</p>
+                    <p>UI/UX Design</p>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="left-section contact">
+
+                    <h3>CONTACT ME</h3>
+
+                    <p>
+                        <span class="contact-icon">☎</span>
+                        +63 920 357 6013
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">✉</span>
+                        moyanohubert@gmail.com
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">📍</span>
+
+                        <span>
+                            Mangaldan,<br>
+                            Pangasinan, Philippines
+                        </span>
+
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">●</span>
+                        github.com/godzu033
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <p class="tech">
-          <strong>Relevant coursework:</strong>
-          Systems Administration and Maintenance,
-          Machine Learning, Cloud Programming (AWS)
-        </p>
 
-      </article>
+        <!-- RIGHT SIDE -->
 
+        <div class="right-side">
 
-      <article class="entry">
+            <!-- HEADER -->
 
-        <div class="entry-header">
+            <div class="header">
 
-          <div>
-            <h3>Manaoag National High School</h3>
+                <h1>
+                    HUBERT<br>
+                    MUYANO
+                </h1>
 
-            <p class="meta">
-              Senior High School, GAS Strand
-            </p>
-          </div>
+                <p class="position">
+                    BSIT Student
+                </p>
 
-          <p class="date">
-            2021 - 2023
-          </p>
-
-        </div>
-
-      </article>
-    </section>
+            </div>
 
 
-    <section>
-      <h2>Projects</h2>
+            <!-- CONTENT -->
 
-      <article class="entry">
+            <div class="content">
 
-        <h3>Pixel Puzzler</h3>
+                <!-- EDUCATION -->
 
-        <ul>
-          <li>
-            Developed an academic game designed to challenge students
-            and users in problem solving and critical thinking.
-          </li>
-        </ul>
-
-      </article>
+                <h2>EDUCATION</h2>
 
 
-      <article class="entry">
+                <div class="education-item">
 
-        <h3>Celestial Jewels</h3>
-
-        <ul>
-          <li>
-            Developed a computer system for a jewelry store to manage
-            inventory, process sales, and improve business operations.
-          </li>
-        </ul>
-
-      </article>
-
-
-      <article class="entry">
-
-        <h3>Clinic Appointment and Patient Record System</h3>
-
-        <ul>
-          <li>
-            Developed a system for managing patient appointments,
-            doctor schedules, medical records, and patient history.
-          </li>
-        </ul>
-
-      </article>
-
-
-      <article class="entry">
-
-        <h3>Mission17: A Web and Mobile Gamified System</h3>
-
-        <ul>
-          <li>
-            Developed a web and mobile platform designed to encourage
-            community participation through measurable and trackable missions.
-          </li>
-        </ul>
-
-      </article>
-
-    </section>
-
-
-    <section>
-      <h2>Technical Skills</h2>
-
-      <dl class="skills">
-
-        <div>
-          <dt>Languages and Frameworks</dt>
-
-          <dd>
-            JavaScript, Python, React Native, React.js,
-            Node.js, Express.js
-          </dd>
-        </div>
-
-
-        <div>
-          <dt>Database and Cloud</dt>
-
-          <dd>
-            AWS, MongoDB, MongoDB Atlas, MySQL,
-            Render, Vercel
-          </dd>
-        </div>
-
-
-        <div>
-          <dt>Tools and Libraries</dt>
-
-          <dd>
-            Expo, TensorFlow, PayMongo API,
-            Git, VirtualBox
-          </dd>
-        </div>
-
-
-        <div>
-          <dt>Core Competencies</dt>
-
-          <dd>
-            Teamwork, Collaboration, Critical Thinking,
-            Problem Solving, UI/UX Design,
-            Time Management
-          </dd>
-        </div>
-
-      </dl>
-    </section>
-
-  </main>
-</body>
-</html>
+                    <h4>
+                        PHINMA UNIVERSITY OF<br>
+                        PANGASINAN
+                    </
