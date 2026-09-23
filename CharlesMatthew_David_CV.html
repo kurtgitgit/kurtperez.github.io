@@ -10,6 +10,10 @@
 
 <style>
 
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,158 +21,145 @@
 }
 
 body {
-    background: #e9eef2;
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #263238;
+    background: #e8edf0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202b33;
 }
+
+
+/* =====================================================
+   RESUME
+===================================================== */
 
 .resume {
     width: 850px;
     min-height: 1100px;
-    margin: 35px auto;
+    margin: 30px auto;
     background: #ffffff;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    display: flex;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
 }
 
 
-/* ================= SIDEBAR ================= */
+/* =====================================================
+   LEFT SIDE
+===================================================== */
 
-.sidebar {
-    background: #172b3a;
-    color: white;
-    padding: 35px 28px;
+.left-side {
+    width: 34%;
+    background: #172d3d;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 35px;
 }
 
-.photo-container {
+
+/* Decorative teal line */
+
+.left-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: #65c5c1;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.photo-area {
+    padding: 42px 20px 25px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .profile-picture {
     width: 155px;
     height: 155px;
-    border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #6cc5c2;
-    padding: 4px;
-    background: white;
+    border-radius: 50%;
+    border: 7px solid #65c5c1;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.sidebar-name {
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.name {
     text-align: center;
+    padding: 0 20px;
     margin-bottom: 35px;
 }
 
-.sidebar-name h2 {
-    font-size: 20px;
-    line-height: 1.2;
+.name h1 {
+    font-size: 25px;
+    line-height: 1.12;
     letter-spacing: 1px;
+    font-weight: 900;
 }
 
-.sidebar-name p {
-    color: #6cc5c2;
-    font-size: 12px;
-    margin-top: 8px;
+.name p {
+    margin-top: 15px;
+    color: #65c5c1;
+    font-size: 11px;
+    letter-spacing: 3px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   LEFT SECTIONS
+===================================================== */
+
+.left-content {
+    padding: 0 27px 0 32px;
+}
+
+.left-section {
+    margin-bottom: 28px;
+}
+
+.left-section h3 {
+    color: #65c5c1;
+    font-size: 11px;
     letter-spacing: 2px;
-}
-
-.sidebar-section {
-    margin-bottom: 30px;
-}
-
-.sidebar-section h3 {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #6cc5c2;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
     padding-bottom: 8px;
     margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 
-.sidebar-section p {
-    font-size: 11px;
+.left-section p {
+    font-size: 10.5px;
     line-height: 1.6;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 
-/* ================= CONTACT ================= */
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact-item {
     display: flex;
+    align-items: flex-start;
     gap: 10px;
-    margin-bottom: 14px;
-    font-size: 11px;
-    line-height: 1.5;
+    margin-bottom: 13px;
 }
 
 .contact-icon {
-    color: #6cc5c2;
-    font-size: 15px;
-    min-width: 18px;
-}
-
-
-/* ================= MAIN ================= */
-
-.main {
-    padding: 0;
-}
-
-
-/* ================= HEADER ================= */
-
-.header {
-    background: #f5f8fa;
-    padding: 55px 45px 40px;
-    border-bottom: 5px solid #6cc5c2;
-}
-
-.header h1 {
-    font-size: 43px;
-    line-height: 1;
-    letter-spacing: 2px;
-    color: #172b3a;
-}
-
-.header h1 span {
-    font-weight: 300;
-}
-
-.header .position {
-    margin-top: 15px;
-    font-size: 15px;
-    color: #6a7b86;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-
-/* ================= CONTENT ================= */
-
-.content {
-    padding: 35px 45px;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-.section-title .number {
-    width: 30px;
-    height: 30px;
-    background: #6cc5c2;
-    color: white;
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
     border-radius: 50%;
+    background: #65c5c1;
+    color: #172d3d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,152 +167,318 @@ body {
     font-weight: bold;
 }
 
-.section-title h2 {
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: #172b3a;
+.contact-text {
+    font-size: 10px;
+    line-height: 1.45;
+    padding-top: 4px;
+    word-break: break-word;
 }
 
 
-/* ================= PROFILE ================= */
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.right-side {
+    width: 66%;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: relative;
+    background: #f3f7f8;
+    padding: 48px 40px 35px;
+    border-bottom: 5px solid #65c5c1;
+    overflow: hidden;
+}
+
+
+/* Decorative shape */
+
+.header::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    top: -100px;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: rgba(101,197,193,0.12);
+}
+
+.header h1 {
+    position: relative;
+    z-index: 2;
+    color: #172d3d;
+    font-size: 38px;
+    line-height: 1.02;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.header h1 span {
+    font-weight: 400;
+}
+
+.position {
+    position: relative;
+    z-index: 2;
+    margin-top: 16px;
+    color: #63727a;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.content {
+    padding: 30px 38px;
+}
+
+.section {
+    margin-bottom: 27px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 14px;
+}
+
+.section-number {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 8px;
+    background: #65c5c1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+    color: #172d3d;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+    height: 1px;
+    background: #d9e1e4;
+    margin-top: 23px;
+}
+
+
+/* =====================================================
+   PROFILE SUMMARY
+===================================================== */
 
 .summary {
-    font-size: 11px;
-    line-height: 1.6;
-    color: #596970;
+    font-size: 10.8px;
+    line-height: 1.65;
+    color: #526169;
 }
 
 
-/* ================= EDUCATION ================= */
+/* =====================================================
+   EDUCATION
+===================================================== */
 
 .education {
-    border-left: 2px solid #dce5e9;
+    position: relative;
     padding-left: 20px;
+    border-left: 2px solid #dce5e8;
 }
 
 .education-item {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
 }
 
 .education-item::before {
     content: "";
-    width: 9px;
-    height: 9px;
-    background: #6cc5c2;
-    border-radius: 50%;
     position: absolute;
     left: -26px;
-    top: 5px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    background: #65c5c1;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #65c5c1;
 }
 
 .education-item h3 {
-    font-size: 13px;
-    color: #172b3a;
-    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #172d3d;
+    margin-bottom: 5px;
 }
 
 .education-item ul {
-    padding-left: 18px;
+    padding-left: 17px;
 }
 
 .education-item li {
-    font-size: 10.5px;
-    line-height: 1.5;
+    font-size: 10px;
+    line-height: 1.55;
+    color: #596970;
     margin-bottom: 2px;
-    color: #596970;
 }
 
 
-/* ================= PERSONAL INFORMATION ================= */
+/* =====================================================
+   PERSONAL INFORMATION
+===================================================== */
 
-.personal ul {
-    padding-left: 18px;
+.personal-list {
+    list-style: none;
 }
 
-.personal li {
+.personal-list li {
     font-size: 10.5px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #596970;
+    padding-left: 17px;
+    position: relative;
 }
 
-
-/* ================= EXPERIENCE ================= */
-
-.experience-title {
-    font-size: 12px;
+.personal-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #65c5c1;
     font-weight: bold;
-    color: #172b3a;
-    margin-bottom: 6px;
 }
 
-.experience ul {
-    padding-left: 20px;
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-box {
+    background: #f5f8f9;
+    border-left: 4px solid #65c5c1;
+    border-radius: 7px;
+    padding: 13px 16px;
 }
 
-.experience li {
-    font-size: 10.5px;
-    line-height: 1.5;
+.experience-box h3 {
+    font-size: 11px;
+    color: #172d3d;
+    margin-bottom: 7px;
+}
+
+.experience-box ul {
+    padding-left: 17px;
+}
+
+.experience-box li {
+    font-size: 10px;
+    line-height: 1.55;
+    color: #596970;
+    margin-bottom: 3px;
+}
+
+
+/* =====================================================
+   REFERENCES
+===================================================== */
+
+.reference-box {
+    background: #f5f8f9;
+    border-radius: 7px;
+    padding: 12px 16px;
+    font-size: 10px;
     color: #596970;
 }
 
 
-/* ================= REFERENCES ================= */
-
-.references ul {
-    padding-left: 18px;
-}
-
-.references li {
-    font-size: 10.5px;
-    color: #596970;
-}
-
-
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 850px) {
 
     .resume {
         width: 95%;
-        grid-template-columns: 1fr;
     }
 
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 650px) {
 
     body {
-        background: white;
+        background: #ffffff;
     }
 
     .resume {
         width: 100%;
         margin: 0;
+        display: block;
         box-shadow: none;
     }
 
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+
+    .left-side {
+        padding-bottom: 30px;
+    }
+
     .header {
-        padding: 40px 25px;
+        padding: 40px 28px 30px;
     }
 
     .header h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .content {
-        padding: 30px 25px;
+        padding: 28px;
     }
 
 }
 
 
-/* ================= PRINT ================= */
+/* =====================================================
+   PRINT
+===================================================== */
 
 @media print {
 
     body {
-        background: white;
+        background: #ffffff;
     }
 
     .resume {
@@ -339,17 +496,20 @@ body {
 
 <body>
 
+
 <div class="resume">
 
 
-<!-- ================= LEFT SIDEBAR ================= -->
+<!-- =====================================================
+     LEFT SIDE
+===================================================== -->
 
-<aside class="sidebar">
+<div class="left-side">
 
 
     <!-- PHOTO -->
 
-    <div class="photo-container">
+    <div class="photo-area">
 
         <img
             src="profile.jpg"
@@ -362,117 +522,133 @@ body {
 
     <!-- NAME -->
 
-    <div class="sidebar-name">
+    <div class="name">
 
-        <h2>
+        <h1>
             DAVID,<br>
             CHARLES<br>
             MATTHEW C.
-        </h2>
+        </h1>
 
         <p>
-            ASPIRING IT STUDENT
+            ASPIRING IT<br>
+            STUDENT
         </p>
 
     </div>
 
 
-    <!-- CONTACT -->
-
-    <div class="sidebar-section">
-
-        <h3>CONTACT</h3>
+    <div class="left-content">
 
 
-        <div class="contact-item">
+        <!-- CONTACT -->
 
-            <span class="contact-icon">☎</span>
+        <div class="left-section">
 
-            <span>
-                +639773980893
-            </span>
+            <h3>CONTACT</h3>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+                <div class="contact-text">
+                    +639773980893
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ⌂
+                </div>
+
+                <div class="contact-text">
+                    Wawa Lingayen, Pangasinan
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    in
+                </div>
+
+                <div class="contact-text">
+                    https://www.linkedin.com/in/
+                    charles-matthew-david-2150272a0
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div class="contact-text">
+                    charlesmatthewcdavid@gmail.com
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="contact-item">
+        <!-- TECHNICAL SKILLS -->
 
-            <span class="contact-icon">⌂</span>
+        <div class="left-section">
 
-            <span>
-                Wawa Lingayen, Pangasinan
-            </span>
+            <h3>TECHNICAL SKILLS</h3>
 
-        </div>
-
-
-        <div class="contact-item">
-
-            <span class="contact-icon">in</span>
-
-            <span>
-                https://www.linkedin.com/in/
-                charles-matthew-david-2150272a0
-            </span>
+            <p>• Data Analysis & Interpretation</p>
+            <p>• Microsoft Office</p>
+            <p>• Business Process Analysis</p>
+            <p>• UI/UX Basic Design</p>
+            <p>• Communication and Teamwork</p>
 
         </div>
 
 
-        <div class="contact-item">
+        <!-- CORE WORK SKILLS -->
 
-            <span class="contact-icon">✉</span>
+        <div class="left-section">
 
-            <span>
-                charlesmatthewcdavid@gmail.com
-            </span>
+            <h3>CORE WORK SKILLS</h3>
+
+            <p>• Patience</p>
+            <p>• Teamwork</p>
+            <p>• Creativity</p>
+            <p>• Problem Solving</p>
+            <p>• Time Management</p>
 
         </div>
+
 
     </div>
 
-
-    <!-- TECHNICAL SKILLS -->
-
-    <div class="sidebar-section">
-
-        <h3>TECHNICAL SKILLS</h3>
-
-        <p>• Data Analysis & Interpretation</p>
-        <p>• Microsoft Office</p>
-        <p>• Business Process Analysis</p>
-        <p>• UI/UX Basic Design</p>
-        <p>• Communication and Teamwork</p>
-
-    </div>
-
-
-    <!-- CORE WORK SKILLS -->
-
-    <div class="sidebar-section">
-
-        <h3>CORE WORK SKILLS</h3>
-
-        <p>• Patience</p>
-        <p>• Teamwork</p>
-        <p>• Creativity</p>
-        <p>• Problem Solving</p>
-        <p>• Time Management</p>
-
-    </div>
-
-
-</aside>
+</div>
 
 
 
-<!-- ================= MAIN CONTENT ================= -->
+<!-- =====================================================
+     RIGHT SIDE
+===================================================== -->
 
-<main class="main">
+<div class="right-side">
 
 
     <!-- HEADER -->
 
-    <header class="header">
+    <div class="header">
 
         <h1>
             CHARLES <span>MATTHEW</span><br>
@@ -483,19 +659,23 @@ body {
             ASPIRING IT STUDENT
         </p>
 
-    </header>
+    </div>
 
+
+    <!-- CONTENT -->
 
     <div class="content">
 
 
-        <!-- PROFILE SUMMARY -->
+        <!-- =================================================
+             PROFILE SUMMARY
+        ================================================== -->
 
         <section class="section">
 
             <div class="section-title">
 
-                <div class="number">
+                <div class="section-number">
                     01
                 </div>
 
@@ -504,6 +684,7 @@ body {
                 </h2>
 
             </div>
+
 
             <p class="summary">
 
@@ -518,13 +699,18 @@ body {
         </section>
 
 
-        <!-- EDUCATION -->
+        <div class="divider"></div>
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
 
         <section class="section">
 
             <div class="section-title">
 
-                <div class="number">
+                <div class="section-number">
                     02
                 </div>
 
@@ -537,6 +723,8 @@ body {
 
             <div class="education">
 
+
+                <!-- PHINMA -->
 
                 <div class="education-item">
 
@@ -565,6 +753,8 @@ body {
                 </div>
 
 
+                <!-- LASIP -->
+
                 <div class="education-item">
 
                     <h3>
@@ -586,6 +776,8 @@ body {
 
                 </div>
 
+
+                <!-- WAWA -->
 
                 <div class="education-item">
 
@@ -610,13 +802,18 @@ body {
         </section>
 
 
-        <!-- PERSONAL INFORMATION -->
+        <div class="divider"></div>
 
-        <section class="section personal">
+
+        <!-- =================================================
+             PERSONAL INFORMATION
+        ================================================== -->
+
+        <section class="section">
 
             <div class="section-title">
 
-                <div class="number">
+                <div class="section-number">
                     03
                 </div>
 
@@ -627,7 +824,7 @@ body {
             </div>
 
 
-            <ul>
+            <ul class="personal-list">
 
                 <li>
                     Date of Birth: December 24, 2005
@@ -646,13 +843,18 @@ body {
         </section>
 
 
-        <!-- EXPERIENCE -->
+        <div class="divider"></div>
 
-        <section class="section experience">
+
+        <!-- =================================================
+             EXPERIENCE
+        ================================================== -->
+
+        <section class="section">
 
             <div class="section-title">
 
-                <div class="number">
+                <div class="section-number">
                     04
                 </div>
 
@@ -663,34 +865,42 @@ body {
             </div>
 
 
-            <p class="experience-title">
-                Academic Projects & Group Work
-            </p>
+            <div class="experience-box">
 
+                <h3>
+                    Academic Projects & Group Work
+                </h3>
 
-            <ul>
+                <ul>
 
-                <li>
-                    Worked collaboratively in team-based
-                    system development projects
-                </li>
+                    <li>
+                        Worked collaboratively in team-based
+                        system development projects
+                    </li>
 
-                <li>
-                    Presented technical reports and system proposals
-                </li>
+                    <li>
+                        Presented technical reports and system proposals
+                    </li>
 
-            </ul>
+                </ul>
+
+            </div>
 
         </section>
 
 
-        <!-- REFERENCES -->
+        <div class="divider"></div>
 
-        <section class="section references">
+
+        <!-- =================================================
+             REFERENCES
+        ================================================== -->
+
+        <section class="section">
 
             <div class="section-title">
 
-                <div class="number">
+                <div class="section-number">
                     05
                 </div>
 
@@ -701,23 +911,22 @@ body {
             </div>
 
 
-            <ul>
+            <div class="reference-box">
 
-                <li>
-                    Available upon request
-                </li>
+                Available upon request
 
-            </ul>
+            </div>
 
         </section>
 
 
     </div>
 
-</main>
+</div>
 
 
 </div>
+
 
 </body>
 
