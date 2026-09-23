@@ -21,6 +21,8 @@
             color: #292929;
         }
 
+        /* ================= MAIN RESUME ================= */
+
         .resume {
             width: 625px;
             min-height: 884px;
@@ -30,7 +32,7 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* LEFT SIDE */
+        /* ================= LEFT SIDE ================= */
 
         .left-side {
             width: 40%;
@@ -39,7 +41,7 @@
             color: white;
         }
 
-        /* PHOTO */
+        /* ================= PHOTO ================= */
 
         .photo-area {
             width: 100%;
@@ -60,7 +62,7 @@
             border: 5px solid #263b4a;
         }
 
-        /* LEFT CONTENT */
+        /* ================= LEFT CONTENT ================= */
 
         .left-content {
             padding: 40px 30px 20px 40px;
@@ -84,7 +86,7 @@
             margin-bottom: 3px;
         }
 
-        /* CONTACT */
+        /* ================= CONTACT ================= */
 
         .contact {
             margin-top: 15px;
@@ -103,14 +105,14 @@
             min-width: 15px;
         }
 
-        /* RIGHT SIDE */
+        /* ================= RIGHT SIDE ================= */
 
         .right-side {
             width: 60%;
             background: white;
         }
 
-        /* HEADER */
+        /* ================= HEADER ================= */
 
         .header {
             height: 250px;
@@ -133,7 +135,7 @@
             font-style: italic;
         }
 
-        /* CONTENT */
+        /* ================= CONTENT ================= */
 
         .content {
             padding: 12px 16px 0 15px;
@@ -147,7 +149,7 @@
             font-weight: bold;
         }
 
-        /* EDUCATION */
+        /* ================= EDUCATION ================= */
 
         .education-item {
             margin-bottom: 8px;
@@ -170,11 +172,11 @@
             margin-bottom: 3px;
         }
 
-        /* PROJECT TITLE */
+        /* ================= PROJECT TITLE ================= */
 
         .project-title {
             position: relative;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         .project-title h2 {
@@ -199,7 +201,7 @@
             border-left: 14px solid #dfd0d3;
         }
 
-        /* PROJECTS */
+        /* ================= PROJECTS ================= */
 
         .project {
             margin-bottom: 8px;
@@ -222,53 +224,23 @@
             margin-bottom: 3px;
         }
 
-        /* RESPONSIVE */
+        /* ================= RESPONSIVE ================= */
 
         @media (max-width: 700px) {
 
             body {
-                background: white;
+                background: #eeeeee;
             }
 
             .resume {
-                width: 100%;
-                margin: 0;
-                box-shadow: none;
+                width: 625px;
+                margin: 10px auto;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
             }
 
         }
 
-        @media (max-width: 500px) {
-
-            .resume {
-                flex-direction: column;
-            }
-
-            .left-side,
-            .right-side {
-                width: 100%;
-            }
-
-            .photo-area {
-                height: 230px;
-            }
-
-            .header {
-                height: auto;
-                padding: 40px 30px;
-            }
-
-            .header h1 {
-                font-size: 32px;
-            }
-
-            .left-content {
-                padding: 30px;
-            }
-
-        }
-
-        /* PRINT */
+        /* ================= PRINT ================= */
 
         @media print {
 
@@ -290,11 +262,14 @@
 
 <body>
 
+
     <div class="resume">
 
-        <!-- LEFT SIDE -->
+
+        <!-- ================= LEFT SIDE ================= -->
 
         <div class="left-side">
+
 
             <!-- PHOTO -->
 
@@ -313,6 +288,7 @@
 
             <div class="left-content">
 
+
                 <!-- PROFILE -->
 
                 <div class="left-section">
@@ -320,11 +296,12 @@
                     <h3>PROFILE</h3>
 
                     <p>
-                        Information Technology student specializing in
-                        Business Informatics at PHINMA University of
-                        Pangasinan. Has a strong foundation in IT concepts
-                        and hands-on experience in academic and
-                        project-based development.
+                        Information Technology student at PHINMA
+                        University of Pangasinan, majoring in Business
+                        Informatics. Has a strong academic foundation
+                        and hands-on experience in IT projects, with
+                        interests in software development, UI/UX design,
+                        and problem solving.
                     </p>
 
                 </div>
@@ -337,7 +314,7 @@
                     <h3>LANGUAGE</h3>
 
                     <p>English</p>
-                    <p>Filipino</p>
+                    <p>Tagalog</p>
 
                 </div>
 
@@ -391,14 +368,16 @@
 
                 </div>
 
+
             </div>
 
         </div>
 
 
-        <!-- RIGHT SIDE -->
+        <!-- ================= RIGHT SIDE ================= -->
 
         <div class="right-side">
+
 
             <!-- HEADER -->
 
@@ -420,7 +399,8 @@
 
             <div class="content">
 
-                <!-- EDUCATION -->
+
+                <!-- ================= EDUCATION ================= -->
 
                 <h2>EDUCATION</h2>
 
@@ -430,4 +410,173 @@
                     <h4>
                         PHINMA UNIVERSITY OF<br>
                         PANGASINAN
-                    </
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            <em>
+                                Bachelor of Science in Information
+                                Technology, Major in Business Informatics
+                            </em>
+
+                            (2023 – Present)
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h4>
+                        MANAOAG NATIONAL HIGH SCHOOL
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <em>General Academic Strand</em>
+                            (2021–2023)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ================= PROJECT ================= -->
+
+                <div class="project-title">
+
+                    <h2>PROJECT</h2>
+
+                </div>
+
+
+                <!-- PIXEL PUZZLER -->
+
+                <div class="project">
+
+                    <h4>Pixel Puzzler</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed an academic game designed to
+                            challenge students and users in problem
+                            solving and critical thinking.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CELESTIAL JEWELS -->
+
+                <div class="project">
+
+                    <h4>Celestial Jewels</h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed a computer system for a jewelry
+                            store to manage inventory, process sales,
+                            and improve business operations.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CLINIC SYSTEM -->
+
+                <div class="project">
+
+                    <h4>
+                        Clinic Appointment and Patient Record System
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed a system for managing patient
+                            appointments, doctor schedules, medical
+                            records, and patient history.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- BARANGAY DIGITAL SYSTEM -->
+
+                <div class="project">
+
+                    <h4>
+                        Barangay Digital System
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed a barangay-focused digital system
+                            featuring blotter reporting, chatbot
+                            assistance, online services, and resident
+                            feedback.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- REVIEWMATE -->
+
+                <div class="project">
+
+                    <h4>
+                        ReviewMate
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Developed an AI-powered and blockchain-secured
+                            web-based learning support system for
+                            summaries, flashcards, and quizzes.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
